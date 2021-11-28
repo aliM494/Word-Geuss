@@ -15,6 +15,10 @@ class PureCompo extends PureComponent {
     this.setState({ name: this.myInput.current.value });
   };
 
+  componentDidMount() {
+    this.myInput.current.focus();
+  }
+
   render() {
     return (
       <div className="form-fa-group text-center mt-4 p-3">

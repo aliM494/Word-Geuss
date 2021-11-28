@@ -1,10 +1,16 @@
-import React from "react";
-import PureCompo from "./PureComponent";
+import React, { useEffect, useRef } from "react";
+import Fcomponent from "./Fcomponent";
 
 const ParentComponent = () => {
+  const myInput = useRef();
+
+  useEffect(() => {
+    myInput.current.focus();
+  }, []);
+
   return (
     <>
-      <PureCompo />
+      <Fcomponent ref={myInput} />
     </>
   );
 };
